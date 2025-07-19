@@ -1,10 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   border: 1px solid blue;
   font-family: Roboto;
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
   min-width: 600px;
+  display: flex;
+  flex-direction: column;
 }
 
 /***************** Header *************/
@@ -27,8 +32,6 @@ body {
 ul {
   display: flex;
   list-style: none;
-  margin: 0;
-  padding: 0;
   font-size: 18px;
 }
 
@@ -76,14 +79,13 @@ li {
   font-size: 48px;
   color: #f9faf8;
   font-weight: 900;
-  margin: 0;
 }
 
 .signup-btn {
   background-color: #3882f6;
   border-color: #3882f6;
   border-radius: 6px;
-  padding: 6px 30px;
+  padding: 4px 30px;
   color: white;
 }
 
@@ -91,7 +93,7 @@ li {
 
 .gallery {
   text-align: center;
-  margin: 40px 0;
+  padding: 80px 0;
 }
 
 .gallery-info {
@@ -104,7 +106,7 @@ li {
 .pictures {
   display: flex;
   justify-content: center;
-  gap: 50px;
+  gap: 56px;
   flex-wrap: wrap;
   font-size: 18px;
 }
@@ -118,4 +120,33 @@ img {
   border-radius: 10px;
   width: 175px;
   height: 175px;
+}
+
+/********* Inspiration Quote *********************/
+
+.quote {
+  background-color: #e5e7eb;
+  display: flex;
+  padding: 80px 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.quote-container {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+}
+
+blockquote {
+  font-size: 36px;
+  font-style: italic;
+  color: #1f2937;
+  display: flex;
+  font-weight: 300;
+}
+
+.signature {
+  align-self: flex-end;
+  font-weight: 600;
 }
