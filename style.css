@@ -18,6 +18,7 @@ body {
   flex-direction: column;
   padding: 0 150px;
 }
+
 .header {
   display: flex;
   padding: 18px 0;
@@ -43,7 +44,6 @@ a {
 li {
   margin-left: 20px;
 }
-
 /********************* Banner ****************/
 
 .hero-container {
@@ -149,4 +149,12 @@ blockquote {
 .signature {
   align-self: flex-end;
   font-weight: 600;
+}
+
+/*********** Action Message ************/
+
+.take-action {
+  margin: 80px 0;
+  border: 2px solid green;
+  display: flex;
 }
