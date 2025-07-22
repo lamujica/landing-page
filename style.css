@@ -3,158 +3,168 @@
   padding: 0;
 }
 
+/* Colors */
+:root {
+  /* background colors */
+  --blue-bgcolor: #1f2937;
+  --grey-bgcolor: #e5e7eb;
+  --accessory-color: #3882f6;
+  --nav-txt-color: #f9faf8;
+  --info-quote-color: #1f2937;
+
+  /* Text */
+  --hero-main-text: 48px;
+  --logo-text: 24px;
+  --info-quote-text: 36px;
+  --secondary-text: 18px;
+}
+
 body {
-  border: 1px solid blue;
-  font-family: Roboto;
+  background: var(--blue-bgcolor);
+  color: #f9faf8;
+  font-family: "Roboto";
+}
+
+/* All container have a max-width of 900px */
+
+.container {
   box-sizing: border-box;
-  min-width: 600px;
-  display: flex;
-  flex-direction: column;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-/***************** Header *************/
-.intro {
-  background-color: #1f2937;
-  flex-direction: column;
-  padding: 0 150px;
-}
-
+/********** Header *************************/
 .header {
   display: flex;
-  padding: 18px 0;
+  padding: 20px;
 }
 
 .logo {
-  margin-right: auto;
-  font-size: 24px;
-  color: #f9faf8;
+  font-size: var(--logo-text);
   font-weight: 900;
+  margin-right: auto;
 }
-ul {
+
+.header-nav {
   display: flex;
   list-style: none;
-  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.header-nav li {
+  margin-left: 15px;
+  font-size: var(--secondary-text);
 }
 
 a {
   text-decoration: none;
-  color: #e5e7eb;
+  color: var(--nav-txt-color);
 }
 
-li {
-  margin-left: 20px;
+/***************Page Hero *********/
+.hero-wrapper {
+  display: flex;
 }
-/********************* Banner ****************/
 
-.hero-container {
+.hero {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
   align-items: center;
-  padding: 100px 0;
+  padding: 60px 20px;
+  gap: 40px;
 }
 
-.hero-box {
+.box {
   display: flex;
-  flex-basis: 50%;
-  min-height: 250px;
-  max-width: 600px;
-  flex-wrap: wrap;
   flex: 1;
-  font-size: 18px;
-  color: #e5e7eb;
-  align-content: center;
-  margin: 20px 0;
-}
-.left {
-  margin-right: 40px;
-}
-.right {
-  background-color: rgb(108, 107, 116);
-  justify-content: center;
-  align-items: center;
 }
 
-.hero-main-text {
-  font-size: 48px;
-  color: #f9faf8;
-  font-weight: 900;
-}
-
-.signup-btn {
-  background-color: #3882f6;
-  border-color: #3882f6;
-  border-radius: 6px;
-  padding: 4px 30px;
-  color: white;
-}
-
-/************Gallery**************/
-
-.gallery {
-  text-align: center;
-  padding: 80px 0;
-}
-
-.gallery-info {
-  font-size: 36px;
-  color: #1f2937;
-  font-weight: 900;
-  margin-bottom: 50px;
-}
-
-.pictures {
-  display: flex;
-  justify-content: center;
-  gap: 56px;
-  flex-wrap: wrap;
-  font-size: 18px;
-}
-
-.picture {
-  max-width: 175px;
-}
-
-img {
-  border: 4px solid #3882f6;
-  border-radius: 10px;
-  width: 175px;
-  height: 175px;
-}
-
-/********* Inspiration Quote *********************/
-
-.quote {
-  background-color: #e5e7eb;
-  display: flex;
-  padding: 80px 0;
-  justify-content: center;
-  align-items: center;
-}
-
-.quote-container {
+.hero-text {
   display: flex;
   flex-direction: column;
-  width: 800px;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: var(--secondary-text);
+}
+
+.hero-text h1 {
+  font-size: var(--hero-main-text);
+  font-weight: 900;
+}
+
+.hero-img {
+  height: 200px;
+  background-color: pink;
+}
+
+.cta-btn {
+  background-color: var(--accessory-color);
+  color: var(--nav-txt-color);
+  border: 2px solid var(--accessory-color);
+  border-radius: 5px;
+  padding: 6px 20px;
+  font-weight: 900;
+}
+
+/****** Info Section *************/
+.info-wrapper {
+  background-color: white;
+  color: var(--info-quote-color);
+  font-size: var(--secondary-text);
+}
+
+.info {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.info > h2 {
+  font-size: var(--info-quote-text);
+  margin-bottom: 40px;
+  font-weight: 900;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 175px;
+}
+
+.card img {
+  height: 150px;
+  width: 150px;
+  border: 6px solid var(--accessory-color);
+  border-radius: 10px;
+}
+
+/******** Inspirational Quote ********/
+.quote-wrapper {
+  background-color: var(--grey-bgcolor);
+  color: var(--info-quote-color);
+}
+
+.quote {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  flex-direction: column;
+  padding: 60px 20px;
 }
 
 blockquote {
-  font-size: 36px;
   font-style: italic;
-  color: #1f2937;
-  display: flex;
-  font-weight: 300;
+  font-size: var(--info-quote-text);
+  font-weight: 200;
+  padding: 0 40px;
 }
 
 .signature {
   align-self: flex-end;
-  font-weight: 600;
-}
-
-/*********** Action Message ************/
-
-.take-action {
-  margin: 80px 0;
-  border: 2px solid green;
-  display: flex;
+  margin-right: 40px;
 }
