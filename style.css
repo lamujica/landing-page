@@ -5,10 +5,10 @@
 
 :root {
   /* background colors */
-  --blue-bgcolor: #1f2937;
-  --grey-bgcolor: #e5e7eb;
-  --accessory-color: #3882f6;
-  --nav-txt-color: #f9faf8;
+  --main-bgcolor: white;
+  --other-bgcolor: #ffc98d;
+  --accessory-color: #e65e72;
+  --nav-txt-color: #cd283b;
   --info-quote-color: #1f2937;
 
   /* Text */
@@ -19,8 +19,8 @@
 }
 
 body {
-  background: var(--blue-bgcolor);
-  color: #f9faf8;
+  background: var(--main-bgcolor);
+  color: black;
   font-family: "Roboto";
   min-width: 600px;
 }
@@ -106,7 +106,7 @@ a {
 }
 .cta-btn {
   background-color: var(--accessory-color);
-  color: var(--nav-txt-color);
+  color: var(--other-bgcolor);
   border: 2px solid var(--accessory-color);
   border-radius: 5px;
   padding: 6px 20px;
@@ -116,7 +116,7 @@ a {
 
 /****** Info Section *************/
 .info-wrapper {
-  background-color: white;
+  background-color: #fdeedb;
   color: var(--info-quote-color);
   font-size: var(--secondary-text);
 }
@@ -147,13 +147,14 @@ a {
 .card img {
   height: 150px;
   width: 150px;
+  padding: 10px;
   border: 6px solid var(--accessory-color);
   border-radius: 10px;
 }
 
 /******** Inspirational Quote ********/
 .quote-wrapper {
-  background-color: var(--grey-bgcolor);
+  background-color: var(--other-bgcolor);
   color: var(--info-quote-color);
 }
 
@@ -181,13 +182,13 @@ blockquote {
 /**** Call to Action (CTA) ******/
 
 .cta-wrapper {
-  background-color: white;
+  background-color: var(--other-bgcolor);
   font-size: var(--secondary-text);
   padding: 60px 20px;
 }
 
 .cta {
-  background-color: var(--accessory-color);
+  background-color: var(--main-bgcolor);
   display: flex;
   align-items: center;
   justify-content: space-around;
